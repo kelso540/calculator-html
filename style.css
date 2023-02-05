@@ -1,5 +1,5 @@
 body{
-    background-color: darkgray;
+    background-color: rgba(0, 0, 0, 0.63);
 }
 section{
     display: grid;
