@@ -24,48 +24,9 @@ const selector = {
     clear: document.querySelector('.clear'),
     del: document.querySelector('.del'),
 };
-const addOne = ()=>{
-    values.numbers += '1';
-    selector.input.value = values.numbers; 
-};
-const addTwo = ()=>{
-    values.numbers += '2';
-    selector.input.value = values.numbers; 
-};
-const addThree = ()=>{
-    values.numbers += '3';
-    selector.input.value = values.numbers; 
-};
-const addFour = ()=>{
-    values.numbers += '4';
-    selector.input.value = values.numbers;
-};
-const addFive = ()=>{
-    values.numbers += '5';
-    selector.input.value = values.numbers;
-};
-const addSix = ()=>{
-    values.numbers += '6';
-    selector.input.value = values.numbers;
-};
-const addSeven = ()=>{
-    values.numbers += '7';
-    selector.input.value = values.numbers; 
-};
-const addEight = ()=>{
-    values.numbers += '8';
-    selector.input.value = values.numbers; 
-};
-const addNine = ()=>{
-    values.numbers += '9';
-    selector.input.value = values.numbers;
-};
-const addZero = ()=>{
-    values.numbers += '0';
-    selector.input.value = values.numbers; 
-};
-const addDot = ()=>{
-    values.numbers += '.';
+
+const addNum = (num)=>{
+    values.numbers += `${num}`;
     selector.input.value = values.numbers; 
 };
 
@@ -78,6 +39,7 @@ const multiply = ()=>{
     selector.input.value = ''; 
     values.numbers = ''; 
 };
+
 const divide = ()=>{
     values.count++; 
     if (values.count > 1){
@@ -87,6 +49,7 @@ const divide = ()=>{
     selector.input.value = ''; 
     values.numbers = ''; 
 };
+
 const add = ()=>{
     values.count++; 
     if (values.count > 1){
@@ -96,6 +59,7 @@ const add = ()=>{
     selector.input.value = ''; 
     values.numbers = ''; 
 };
+
 const subtract = ()=>{
     values.count++; 
     if (values.count > 1){
@@ -156,17 +120,17 @@ const del = ()=>{
     values.numbers = newValue;  
 };
 
-selector.one.addEventListener('click', addOne); 
-selector.two.addEventListener('click', addTwo);
-selector.three.addEventListener('click', addThree);
-selector.four.addEventListener('click', addFour);
-selector.five.addEventListener('click', addFive);
-selector.six.addEventListener('click', addSix);
-selector.seven.addEventListener('click', addSeven);
-selector.eight.addEventListener('click', addEight);
-selector.nine.addEventListener('click', addNine);
-selector.zero.addEventListener('click', addZero);
-selector.dot.addEventListener('click', addDot);
+selector.one.addEventListener('click', ()=>addNum('1')); 
+selector.two.addEventListener('click', ()=>addNum('2'));
+selector.three.addEventListener('click', ()=>addNum('3'));
+selector.four.addEventListener('click', ()=>addNum('4'));
+selector.five.addEventListener('click', ()=>addNum('5'));
+selector.six.addEventListener('click', ()=>addNum('6'));
+selector.seven.addEventListener('click', ()=>addNum('7'));
+selector.eight.addEventListener('click', ()=>addNum('8'));
+selector.nine.addEventListener('click', ()=>addNum('9'));
+selector.zero.addEventListener('click', ()=>addNum('0'));
+selector.dot.addEventListener('click', ()=>addNum('.'));
 
 selector.multiply.addEventListener('click', multiply); 
 selector.divide.addEventListener('click', divide);
